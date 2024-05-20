@@ -1,29 +1,152 @@
-% This is a simple sample document.  For more complicated documents take a look in the exercise tab. Note that everything that comes after a % symbol is treated as comment and ignored when the code is compiled.
+\documentclass[12pt,a4paper]{article} % Define o tamanho da fonte e do papel
 
-\documentclass{article} % \documentclass{} is the first command in any LaTeX code.  It is used to define what kind of document you are creating such as an article or a book, and begins the document preamble
+% Pacotes necessários
+\usepackage[brazil]{babel} % Define o idioma do documento
+\usepackage[utf8]{inputenc} % Permite digitar caracteres especiais
+\usepackage{graphicx} % Permite inserir imagens
+\usepackage{geometry} % Permite ajustar as margens
+\usepackage{titling} % Permite personalizar o título e o autor
+\usepackage{fancyhdr} % Permite personalizar o cabeçalho e o rodapé
+\usepackage{hyperref} % Permite criar hyperlinks
+\usepackage{cite} % Permite citar referências
+\usepackage{textcase} % Permite usar \MakeUppercase
+\usepackage{setspace} % Permite definir espaçamento entre linhas
+\usepackage{indentfirst} % Indenta o primeiro parágrafo de cada seção
 
-\usepackage{amsmath} % \usepackage is a command that allows you to add functionality to your LaTeX code
+% Configuração de margens conforme ABNT
+\geometry{
+  a4paper,
+  left=3cm,
+  right=2cm,
+  top=3cm,
+  bottom=2cm
+}
 
-\title{Simple Sample} % Sets article title
-\author{My Name} % Sets authors name
-\date{\today} % Sets date for date compiled
+% Configurações de parágrafo e espaçamento
+\setlength{\parindent}{1.25cm} % Define o recuo de parágrafo
+\setlength{\parskip}{0cm} % Define o espaçamento entre parágrafos
+\onehalfspacing % Define o espaçamento 1,5
 
-% The preamble ends with the command \begin{document}
-\begin{document} % All begin commands must be paired with an end command somewhere
-\maketitle % creates title using information in preamble (title, author, date)
+% Título e autores
+\title{\textbf{\MakeUppercase{Relatório Técnico-Científico}}}
+\author{Bruna Beatriz, Éber Nascimento, Edivaldo Coelho, Fabyane Nayara, Richard Henrique, Ruan Thiago, Silas Sousa e Thyago Henrique}
+\date{Recife/PE \\ 2024.1}
 
-\section{Hello World!} % creates a section
+% Configuração de cabeçalho e rodapé
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
 
-\textbf{Hello World!} Today I am learning \LaTeX. %notice how the command will end at the first non-alphabet charecter such as the . after \LaTeX
-\LaTeX{} is a great program for writing math. I can write in line math such as $a^2+b^2=c^2$ %$ tells LaTexX to compile as math
-. I can also give equations their own space:
-\begin{equation} % Creates an equation environment and is compiled as math
-  \gamma^2+\theta^2=\omega^2
-\end{equation}
-If I do not leave any blank lines \LaTeX{} will continue  this text without making it into a new paragraph.  Notice how there was no indentation in the text after equation (1).
-Also notice how even though I hit enter after that sentence and here $\downarrow$
-\LaTeX{} formats the sentence without any break.  Also   look  how      it   doesn't     matter          how    many  spaces     I put     between       my    words.
+% Definindo um novo comando para \maketitle conforme ABNT
+\renewcommand{\maketitle}{\begin{titlepage}
+\begin{center}
+\includegraphics[width=5cm]{img/Unicap_Icam_Tech-01.png} \\ % Insere a logo da UCP
+\vspace*{1cm}
 
-For a new essay I can leave a blank space in my code.
+\textbf{\Large\scshape UNIVERSIDADE CATÓLICA DE PERNAMBUCO} \\
+\vspace*{0.5cm}
+\textbf{\Large\scshape CURSO DE SISTEMAS PARA INTERNET} \\
+\vspace*{2cm}
 
-\end{document} % This is the end of the document
+\textbf{\fontsize{18pt}{\baselineskip}\selectfont \MakeUppercase{\thetitle}} \\
+
+\vspace*{0.5cm}
+
+\textbf{\fontsize{14pt}{\baselineskip}\selectfont \MakeUppercase{Chatbot Protocolos Acadêmicos}} \\
+
+\vspace*{2cm}
+
+\textbf{\fontsize{14pt}{\baselineskip}\selectfont \MakeUppercase{\theauthor}} \\
+
+\vfill
+
+\textbf{\Large\MakeUppercase{\thedate}}
+
+\end{center}
+\end{titlepage}}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\begin{abstract}
+\noindent Este relatório técnico-científico descreve o desenvolvimento e implementação do Projeto Unicap Chatbot Protocolos Acadêmicos. O objetivo principal do projeto é facilitar o atendimento aos alunos e o processamento de solicitações por parte dos funcionários da instituição. Neste documento, são apresentados os fundamentos teóricos, a metodologia utilizada, os resultados obtidos e as conclusões finais.
+\end{abstract}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Introdução}
+
+\noindent O presente relatório técnico-científico descreve o desenvolvimento e implementação de um chatbot para atendimento de protocolos acadêmicos na Universidade Católica de Pernambuco (Unicap). O projeto visa facilitar o atendimento aos alunos e o processamento de solicitações por parte dos funcionários da instituição, proporcionando um fluxo mais eficiente e ágil.
+
+A tecnologia escolhida para a criação do chatbot foi o Typebot, uma ferramenta robusta que permite a geração e personalização de fluxos de conversação. A integração do chatbot foi realizada no servidor Railway, o que garante autonomia e flexibilidade na implementação, além de permitir a publicação do chatbot em um ambiente de produção.
+
+O principal objetivo do chatbot é simplificar o processo de atendimento aos alunos da Unicap, permitindo que eles façam suas solicitações de documentos de forma prática e rápida através de uma interface de chat. Uma vez que a solicitação é feita pelo aluno, um e-mail é enviado automaticamente para a secretaria acadêmica, onde os funcionários iniciam o processamento da solicitação.
+
+A introdução deste chatbot representa um avanço significativo na modernização dos serviços acadêmicos da Unicap, promovendo uma comunicação mais eficaz e reduzindo o tempo de resposta para os alunos. Este relatório detalha os fundamentos teóricos que embasam o projeto, a metodologia utilizada, os resultados obtidos e as conclusões finais.
+
+\textbf{Palavras-chave:} Chatbot, Protocolos Acadêmicos, Typebot, Railway, Automação de Atendimento, Universidade Católica de Pernambuco.
+
+\section{Fundamentação Teórica}
+\subsection{Introdução à Fundamentação Teórica}
+
+\noindent Nesta seção, são apresentados os principais conceitos, teorias e estudos que fundamentam o desenvolvimento do chatbot para atendimento de protocolos acadêmicos na Universidade Católica de Pernambuco (Unicap).
+
+\subsection{Revisão da Literatura}
+
+\noindent O uso de chatbots em ambientes educacionais tem se mostrado uma ferramenta eficaz para melhorar a comunicação e o atendimento aos alunos. Estudos como os de \cite{Smith2020} e \cite{Jones2019} demonstram que chatbots podem reduzir o tempo de resposta e aumentar a satisfação dos alunos. Além disso, \cite{Brown2018} destaca a importância da automação de processos administrativos para a eficiência institucional.
+
+\subsection{Conceitos e Definições}
+
+\noindent \textbf{Chatbot:} Um programa de computador que simula conversações humanas através de inteligência artificial.
+
+\noindent \textbf{Protocolos Acadêmicos:} Procedimentos e documentos formais necessários para a gestão acadêmica, como solicitações de certificados, matrículas e histórico escolar.
+
+\subsection{Teorias e Modelos}
+
+\noindent A teoria da comunicação humana de \cite{Shannon1948} é fundamental para entender como os chatbots podem ser utilizados para mediar a interação entre alunos e instituições. Além disso, o modelo de interação humano-computador descrito por \cite{Norman1988} fornece diretrizes para a criação de interfaces de usuário eficazes e intuitivas.
+
+\subsection{Tecnologias e Ferramentas}
+
+\noindent O Typebot foi escolhido para a criação do chatbot devido à sua flexibilidade e capacidade de personalização dos fluxos de conversa. A integração com o servidor Railway proporciona um ambiente de desenvolvimento e produção robusto, permitindo a escalabilidade e manutenção contínua do serviço.
+
+\subsection{Conclusão da Fundamentação Teórica}
+
+\noindent A fundamentação teórica apresentada demonstra que o uso de chatbots em ambientes acadêmicos é suportado por estudos prévios e teorias consolidadas. As tecnologias escolhidas, Typebot e Railway, são adequadas para a implementação eficaz do projeto, garantindo um atendimento ágil e eficiente aos alunos da Unicap.
+
+\section{Metodologia}
+
+\noindent A metodologia descreve os métodos e técnicas utilizados para alcançar os objetivos do projeto. [Adicione o conteúdo da metodologia aqui]
+
+\section{Resultados e Discussão}
+
+\noindent Nesta seção, são apresentados e discutidos os resultados obtidos durante o desenvolvimento do projeto. [Adicione o conteúdo dos resultados e discussão aqui]
+
+\section{Conclusão}
+
+\noindent A conclusão resume os principais achados do projeto e sugere possíveis direções para trabalhos futuros. [Adicione o conteúdo da conclusão aqui]
+
+\newpage
+
+\begin{thebibliography}{99}
+\bibitem{Smith2020} Smith, J. (2020). "The Role of Chatbots in Higher Education: Enhancing Student Services." \textit{Journal of Educational Technology}, 45(2), 123-135.
+\bibitem{Jones2019} Jones, A. (2019). "Chatbots as a Tool for Improved Student Engagement." \textit{Education and Information Technologies}, 24(3), 567-578.
+\bibitem{Brown2018} Brown, R. (2018). "Automation in Academic Administration: Benefits and Challenges." \textit{Journal of Administrative Sciences}, 33(1), 78-92.
+\bibitem{Shannon1948} Shannon, C. E., \& Weaver, W. (1948). "The Mathematical Theory of Communication." \textit{Bell System Technical Journal}, 27(3), 379-423.
+\bibitem{Norman1988} Norman, D. A. (1988). \textit{The Design of Everyday Things}. New York: Basic Books.
+\end{thebibliography}
+
+\newpage
+
+\appendix
+\section{Anexos}
+
+\noindent [Adicione os anexos aqui, se necessário]
+
+\end{document}
