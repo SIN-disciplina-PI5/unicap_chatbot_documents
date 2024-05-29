@@ -40,6 +40,7 @@ Este relatório foi desenvolvido utilizando LaTeX, e o código-fonte está dispo
 
 1. **Pré-requisitos**:
    - Instale uma distribuição LaTeX, como MiKTeX (Windows) ou TeX Live (Linux/Mac).
+   - <a href="https://miktex.org/">MiKTeX</a> || <a href="https://tug.org/texlive/">TeX Live</a>
    - Certifique-se de ter um editor LaTeX instalado, como TeXstudio ou Overleaf.
 
 2. **Compilação**:
