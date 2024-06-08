@@ -133,3 +133,17 @@ Após a ação de envio de email, foi configurado um webhook HTTP Request no Typ
 
 \subsection{Publicação do Chatbot no Railway}
 O chatbot foi publicado no Railway para garantir maior autonomia e facilidade de escalabilidade. A configuração envolveu a definição das variáveis de ambiente e a configuração do domínio para acesso ao chatbot.
+
+\section{Desenvolvimento do Servidor Backend}
+ 
+\subsection{Configuração do Servidor}
+O servidor foi desenvolvido utilizando Node.js e Express. O middleware Body-Parser foi configurado para analisar dados JSON, facilitando a interpretação dos dados enviados pelo Typebot.
+ 
+\subsection{Conexão com o MongoDB Atlas}
+O servidor foi configurado para se conectar ao MongoDB Atlas, garantindo segurança e escalabilidade. As credenciais de conexão foram armazenadas como variáveis de ambiente para maior segurança.
+ 
+\subsection{Implementação das Rotas}
+A rota principal /submit foi criada para receber dados do Typebot. Esta rota foi configurada para salvar informações no MongoDB Atlas, incluindo os links de arquivos enviados pelos usuários.
+ 
+\subsection{Publicação do Servidor na Vercel}
+O servidor backend foi publicado na Vercel, proporcionando uma implementação fácil e escalável.
