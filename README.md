@@ -12,23 +12,40 @@ O relatório está organizado da seguinte forma:
 2. **Resumo**: Apresenta uma visão geral do projeto, incluindo o objetivo principal, fundamentos teóricos, metodologia utilizada, resultados obtidos e conclusões finais.
 3. **Sumário**: Lista todas as seções e subseções do relatório.
 4. **Introdução**: Descreve o contexto e os objetivos do projeto, além de uma breve introdução às tecnologias utilizadas.
-5. **Fundamentação Teórica**: Apresenta os principais conceitos, teorias e estudos que fundamentam o projeto.
-   - **Introdução à Fundamentação Teórica**
-   - **Revisão da Literatura**
-   - **Conceitos e Definições**
-   - **Teorias e Modelos**
-   - **Tecnologias e Ferramentas**
-   - **Conclusão da Fundamentação Teórica**
-6. **Metodologia**: Descreve os métodos e técnicas utilizados para alcançar os objetivos do projeto.
-7. **Resultados e Discussão**: Apresenta e discute os resultados obtidos durante o desenvolvimento do projeto.
-8. **Conclusão**: Resume os principais achados do projeto e sugere possíveis direções para trabalhos futuros.
-9. **Referências**: Lista todas as fontes citadas ao longo do relatório.
-10. **Anexos**: Inclui informações adicionais e complementares ao relatório.
+5. **Ferramentas e Tecnologias Utilizadas**: Detalha as ferramentas e tecnologias empregadas no desenvolvimento do projeto.
+   - **Typebot**
+   - **Railway**
+   - **Node.js e Express**
+   - **MongoDB Atlas**
+   - **Vercel**
+   - **Git e GitHub**
+   - **Front-end Estático e PWA**
+   - **WebLatex**
+6. **Desenvolvimento do Chatbot**: Descreve o processo de criação e configuração do chatbot.
+   - **Criação do Chatbot no Typebot**
+   - **Configuração do Email no Typebot**
+   - **Configuração do Webhook no Typebot**
+   - **Publicação do Chatbot no Railway**
+   - **Diagrama de Caso de Uso**
+7. **Desenvolvimento do Servidor Backend**: Descreve a configuração e implementação do servidor backend.
+   - **Configuração do Servidor**
+   - **Conexão com o MongoDB Atlas**
+   - **Implementação das Rotas**
+   - **Publicação do Servidor na Vercel**
+8. **Resultados**: Apresenta e discute os resultados obtidos durante o desenvolvimento do projeto.
+9. **Conclusão**: Resume os principais achados do projeto e sugere possíveis direções para trabalhos futuros.
+10. **Próximos Passos**: Apresenta sugestões para a continuidade e aprimoramento do projeto.
 
 ## Tecnologias Utilizadas
 
 - **Typebot**: Ferramenta usada para a criação e personalização dos fluxos de conversação do chatbot.
 - **Railway**: Plataforma utilizada para a integração e hospedagem do chatbot, proporcionando um ambiente de desenvolvimento e produção robusto e escalável.
+- **Node.js e Express**: Utilizados para o desenvolvimento do servidor backend, garantindo uma estrutura robusta e eficiente.
+- **MongoDB Atlas**: Banco de dados utilizado para o armazenamento seguro e escalável das informações dos usuários e suas interações com o chatbot.
+- **Vercel**: Plataforma utilizada para a publicação do servidor backend, do front-end estático e do PWA, oferecendo facilidade de implementação e escalabilidade.
+- **Git e GitHub**: Ferramentas utilizadas para controle de versão e colaboração de todo o time no desenvolvimento do projeto.
+- **Front-end Estático e PWA**: Desenvolvido em React.js, é responsivo e permite que os usuários baixem o PWA como um aplicativo e utilizem o software diretamente em seus smartphones sem precisar acessar a web.
+- **WebLatex**: Utilizado para a criação do relatório técnico, com a contribuição de cada membro do time, garantindo uma colaboração eficiente e organizada.
 
 ## Objetivo do Projeto
 
@@ -40,7 +57,7 @@ Este relatório foi desenvolvido utilizando LaTeX, e o código-fonte está dispo
 
 1. **Pré-requisitos**:
    - Instale uma distribuição LaTeX, como MiKTeX (Windows) ou TeX Live (Linux/Mac).
-   - <a href="https://miktex.org/">MiKTeX</a> || <a href="https://tug.org/texlive/">TeX Live</a>
+   - [MiKTeX](https://miktex.org/) || [TeX Live](https://tug.org/texlive/)
    - Certifique-se de ter um editor LaTeX instalado, como TeXstudio ou Overleaf.
 
 2. **Compilação**:
