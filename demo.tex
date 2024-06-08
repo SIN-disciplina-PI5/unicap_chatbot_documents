@@ -119,3 +119,17 @@ Simulação do portal do aluno da Unicap, onde o link do Typebot publicado no Ra
 
 \subsection{WebLatex}
 Utilizamos o WebLatex para a criação do relatório técnico, com a contribuição de cada membro do time, garantindo uma colaboração eficiente e organizada.
+
+\section{Desenvolvimento do Chatbot}
+
+\subsection{Criação do Chatbot no Typebot}
+O Typebot foi escolhido por sua facilidade de uso e integração com várias plataformas. O fluxo de conversação foi cuidadosamente desenhado para atender aos principais protocolos acadêmicos listados anteriormente. Maria Helena, Auxiliar Administrativa da Secretaria da Unicap Icam Tech, contribuiu significativamente ajudando na criação e validação dos fluxos de conversação.
+
+\subsection{Configuração do Email no Typebot}
+As credenciais SMTP do Gmail foram configuradas diretamente no Typebot para permitir o envio de emails, garantindo que os emails enviados cheguem ao destinatário com o domínio do projeto. No futuro, a Unicap pretende implementar o sistema para que os emails cheguem com o domínio da Unicap. No fluxo de conversação do Typebot, foi adicionada uma ação de envio de email para a secretaria, incluindo todas as informações relevantes da solicitação.
+
+\subsection{Configuração do Webhook no Typebot}
+Após a ação de envio de email, foi configurado um webhook HTTP Request no Typebot para enviar os dados das interações dos usuários para o servidor backend, incluindo informações pessoais e arquivos anexados.
+
+\subsection{Publicação do Chatbot no Railway}
+O chatbot foi publicado no Railway para garantir maior autonomia e facilidade de escalabilidade. A configuração envolveu a definição das variáveis de ambiente e a configuração do domínio para acesso ao chatbot.
