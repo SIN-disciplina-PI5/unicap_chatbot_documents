@@ -83,78 +83,13 @@
 
 \section{Introdução}
 
-\noindent O presente relatório técnico-científico descreve o desenvolvimento e implementação de um chatbot para atendimento de protocolos acadêmicos na Universidade Católica de Pernambuco (Unicap). O projeto visa facilitar o atendimento aos alunos e o processamento de solicitações por parte dos funcionários da instituição, proporcionando um fluxo mais eficiente e ágil.
+\noindent Este documento apresenta a documentação técnica do projeto de desenvolvimento de um chatbot para atendimento automatizado aos alunos e apoio aos colaboradores da secretaria da Unicap Icam Tech. O chatbot foi criado utilizando a plataforma Typebot, publicado no Railway para maior autonomia e escalabilidade, e configurado para armazenar informações no banco de dados MongoDB Atlas. Após cada atendimento, um email é enviado via SMTP configurado no Typebot, utilizando o SMTP do Gmail do projeto, de modo que os emails enviados cheguem ao destinatário com o domínio do projeto. Em seguida, um webhook armazena os dados no MongoDB Atlas. O servidor backend foi publicado na Vercel. Além disso, o chatbot foi integrado a um front-end estático desenvolvido em React.js e responsivo, publicado na Vercel, simulando a inclusão do chat no portal do aluno da Unicap. Também foi desenvolvido um PWA (Progressive Web App) do front-end publicado na Vercel com o chat incluído, permitindo que os usuários baixem o PWA como um aplicativo e utilizem o software diretamente em seus smartphones sem precisar acessar a web. O principal objetivo do chatbot é atender aos seguintes protocolos acadêmicos:
 
-A tecnologia escolhida para a criação do chatbot foi o Typebot, uma ferramenta robusta que permite a geração e personalização de fluxos de conversação. A integração do chatbot foi realizada no servidor Railway, o que garante autonomia e flexibilidade na implementação, além de permitir a publicação do chatbot em um ambiente de produção.
-
-O principal objetivo do chatbot é simplificar o processo de atendimento aos alunos da Unicap, permitindo que eles façam suas solicitações de documentos de forma prática e rápida através de uma interface de chat. Uma vez que a solicitação é feita pelo aluno, um e-mail é enviado automaticamente para a secretaria acadêmica, onde os funcionários iniciam o processamento da solicitação.
-
-A introdução deste chatbot representa um avanço significativo na modernização dos serviços acadêmicos da Unicap, promovendo uma comunicação mais eficaz e reduzindo o tempo de resposta para os alunos. Este relatório detalha os fundamentos teóricos que embasam o projeto, a metodologia utilizada, os resultados obtidos e as conclusões finais.
-
-\textbf{Palavras-chave:} Chatbot, Protocolos Acadêmicos, Typebot, Railway, Automação de Atendimento, Universidade Católica de Pernambuco.
-
-\section{Fundamentação Teórica}
-\subsection{Introdução à Fundamentação Teórica}
-
-\noindent Nesta seção, são apresentados os principais conceitos, teorias e estudos que fundamentam o desenvolvimento do chatbot para atendimento de protocolos acadêmicos na Universidade Católica de Pernambuco (Unicap).
-
-\subsection{Revisão da Literatura}
-
-\noindent O uso de chatbots em ambientes educacionais tem se mostrado uma ferramenta eficaz para melhorar a comunicação e o atendimento aos alunos. Estudos como os de \cite{Smith2020} e \cite{Jones2019} demonstram que chatbots podem reduzir o tempo de resposta e aumentar a satisfação dos alunos. Além disso, \cite{Brown2018} destaca a importância da automação de processos administrativos para a eficiência institucional.
-
-\subsection{Conceitos e Definições}
-
-\noindent \textbf{Chatbot:} Um programa de computador que simula conversações humanas através de inteligência artificial.
-
-\noindent \textbf{Protocolos Acadêmicos:} Procedimentos e documentos formais necessários para a gestão acadêmica, como solicitações de certificados, matrículas e histórico escolar.
-
-\subsection{Teorias e Modelos}
-
-\noindent A teoria da comunicação humana de \cite{Shannon1948} é fundamental para entender como os chatbots podem ser utilizados para mediar a interação entre alunos e instituições. Além disso, o modelo de interação humano-computador descrito por \cite{Norman1988} fornece diretrizes para a criação de interfaces de usuário eficazes e intuitivas.
-
-\subsection{Tecnologias e Ferramentas}
-
-\noindent O Typebot foi escolhido para a criação do chatbot devido à sua flexibilidade e capacidade de personalização dos fluxos de conversa. A integração com o servidor Railway proporciona um ambiente de desenvolvimento e produção robusto, permitindo a escalabilidade e manutenção contínua do serviço.
-
-\subsection{Conclusão da Fundamentação Teórica}
-
-\noindent A fundamentação teórica apresentada demonstra que o uso de chatbots em ambientes acadêmicos é suportado por estudos prévios e teorias consolidadas. As tecnologias escolhidas, Typebot e Railway, são adequadas para a implementação eficaz do projeto, garantindo um atendimento ágil e eficiente aos alunos da Unicap.
-
-\section{Metodologia}
-
-\noindent A metodologia descreve os métodos e técnicas utilizados para alcançar os objetivos do projeto. [Adicione o conteúdo da metodologia aqui]
-
-\section{Resultados e Discussão}
-
-\noindent Nesta seção, serão apresentados os resultados obtidos com a implementação do chatbot para automatização de respostas sobre protocolos acadêmicos na Secretaria da Universidade Católica de Pernambuco (UNICAP), seguidos por uma discussão sobre os principais achados e suas implicações.
-
-\subsection{Resultado Obtidos}
-
-\noindent A implementação do chatbot para automatização de respostas sobre protocolos acadêmicos na Secretaria da Universidade Católica de Pernambuco (UNICAP) resultou em uma série de benefícios tangíveis e percebidos. Em termos de eficiência operacional, o chatbot demonstrou uma notável capacidade de resolver consultas dos alunos de forma precisa e rápida. Isso se refletiu em uma redução significativa no tempo de espera dos estudantes para obter informações e a automatização da demanda dos funcionarios da secrétaria que poderão trabalhar mais livres de cargas altas por conta da grande demanda de atendimento ao e-mail.
-
-\section{Conclusão}
-
-\noindent O desenvolvimento e a implementação do chatbot para a Universidade resultaram em uma significativa melhoria na automação e eficiência dos processos acadêmicos. Com a introdução deste sistema inteligente, foi possível atingir diversos objetivos que beneficiarão tanto os estudantes quanto o corpo administrativo da universidade.
-
-\noindent Em primeiro lugar, a automação de protocolos acadêmicos foi uma das maiores conquistas deste projeto. O chatbot foi programado para lidar com uma variedade de solicitações comuns, como entrega de certificados para horas complementares e outras consultas frequentes. Isso permitiu uma redução substancial na carga de trabalho manual da secretaria, que anteriormente precisava responder a cada solicitação individualmente. Como resultado, os funcionários puderam dedicar mais tempo a tarefas complexas que requerem intervenção humana, melhorando assim a eficiência geral do departamento.
-
-\noindent Além disso, a implementação do chatbot trouxe uma melhoria significativa no tempo de resposta às consultas dos estudantes. Antes, os alunos frequentemente enfrentavam longos períodos de espera para receber respostas via e-mail, devido ao alto volume de solicitações. Com o chatbot, as respostas são fornecidas instantaneamente, o que aumenta a satisfação dos alunos e torna o processo de obtenção de informações mais rápido e eficiente. Esse ganho em agilidade é especialmente importante em períodos críticos do calendário acadêmico, como inscrições e exames finais, quando a demanda por informações é maior.
-
-\newpage
-
-\begin{thebibliography}{99}
-\bibitem{Smith2020} Smith, J. (2020). "The Role of Chatbots in Higher Education: Enhancing Student Services." \textit{Journal of Educational Technology}, 45(2), 123-135.
-\bibitem{Jones2019} Jones, A. (2019). "Chatbots as a Tool for Improved Student Engagement." \textit{Education and Information Technologies}, 24(3), 567-578.
-\bibitem{Brown2018} Brown, R. (2018). "Automation in Academic Administration: Benefits and Challenges." \textit{Journal of Administrative Sciences}, 33(1), 78-92.
-\bibitem{Shannon1948} Shannon, C. E., \& Weaver, W. (1948). "The Mathematical Theory of Communication." \textit{Bell System Technical Journal}, 27(3), 379-423.
-\bibitem{Norman1988} Norman, D. A. (1988). \textit{The Design of Everyday Things}. New York: Basic Books.
-\end{thebibliography}
-
-\newpage
-
-\appendix
-\section{Anexos}
-
-\noindent [Adicione os anexos aqui, se necessário]
-
-\end{document}
+\begin{itemize}
+    \item Atividades Complementares
+    \item Regime Especial
+    \item Histórico Acadêmico
+    \item Tratamento Excepcional
+    \item Solicitação de Inserção de Placa
+    \item Revisão de Prova
+\end{itemize}
